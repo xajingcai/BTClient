@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:weightSum="1"
+	>
+    <TextView android:id="@+id/Text0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BlueToothTest11"
+    />
+    <ScrollView
+		android:id="@+id/ScrollView01"
+		android:layout_height="46dp"
+		android:layout_width="fill_parent"
+		android:scrollbars="vertical"
+		android:layout_weight="0.33">
+
+	<TextView android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+		<EditText  
+			android:id="@+id/Edit0" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_gravity="bottom">
+		</EditText>
+		<Button 
+			android:text="send" 
+			android:id="@+id/Button02" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:onClick="onSendButtonClicked"
+			>
+
+		</Button>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+        >
+       	<Button
+			android:text="连接"
+			android:id="@+id/Button03"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="onConnectButtonClicked">
+		</Button>
+		<Button
+			android:text="保存" 
+			android:id="@+id/Button04" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="onSaveButtonClicked">
+		</Button>
+		<Button 
+			android:text="清空" 
+			android:id="@+id/Button05" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="onClearButtonClicked">
+		</Button>
+		<Button 
+			android:text="退出" 
+			android:id="@+id/Button06" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="onQuitButtonClicked">
+		</Button>
+    </LinearLayout>
+<RelativeLayout
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+
+</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="362dp">
+
+		<Button
+			android:layout_width="60dip"
+			android:layout_height="60dip"
+			android:text="UP"
+			android:id="@+id/up"
+
+			android:layout_above="@+id/left"
+			android:layout_toRightOf="@+id/left" />
+
+		<Button
+			android:layout_width="60dip"
+			android:layout_height="60dip"
+			android:text="LT"
+			android:id="@+id/left"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/down" />
+
+		<Button
+			android:layout_width="60dip"
+			android:layout_height="60dip"
+			android:text="Down"
+			android:id="@+id/down"
+			android:layout_below="@+id/right"
+			android:layout_toLeftOf="@+id/right" />
+
+		<Button
+			android:layout_width="60dip"
+			android:layout_height="60dip"
+			android:text="Right"
+			android:id="@+id/right"
+			android:layout_alignTop="@+id/left"
+			android:layout_alignRight="@+id/button2" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="TurnLeft"
+			android:id="@+id/button"
+			android:layout_below="@+id/down"
+			android:layout_alignLeft="@+id/left" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="TurnRight"
+			android:id="@+id/button2"
+			android:layout_below="@+id/down"
+			android:layout_centerHorizontal="true" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="CBtn"
+			android:id="@+id/button3"
+			android:layout_below="@+id/right"
+			android:layout_alignParentRight="true" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="DBtn"
+			android:id="@+id/button4"
+			android:layout_below="@+id/down"
+			android:layout_alignParentRight="true"
+			android:layout_alignLeft="@+id/button3" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="ABtn"
+			android:id="@+id/button5"
+			android:layout_alignTop="@+id/right"
+			android:layout_toLeftOf="@+id/button3" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="BBtn"
+			android:id="@+id/button6"
+			android:layout_alignTop="@+id/button3"
+			android:layout_alignRight="@+id/button5" />
+
+
+	</RelativeLayout>
+
+
+</LinearLayout><!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient4new/app/src/main/res/layout/main.xml -->

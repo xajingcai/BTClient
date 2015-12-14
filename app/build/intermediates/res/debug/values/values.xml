@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient4new/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">BTClient</string>
     <string name="hello">Hello World, BTClient!</string>

@@ -40,7 +40,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class BTClient extends Activity {
 	
@@ -67,6 +68,8 @@ public class BTClient extends Activity {
 	private Button btn4 = null;
 	private Button btn5 = null;
 	private Button btn6 = null;
+
+	private SeekBar sb_test;  		//滚动条按钮
 
 	public String filename=""; //用来保存存储的文件名
 	BluetoothDevice _device = null;     //蓝牙设备
@@ -114,6 +117,10 @@ public class BTClient extends Activity {
 		leftbtn = (Button) findViewById(R.id.left);
 		leftbtn.setOnTouchListener(new LeftTouchListener());
 
+		sb_test = (SeekBar) findViewById(R.id.seekBar);
+		// 进度条的最大值
+		sb_test.setMax(10);
+		sb_test.setOnSeekBarChangeListener(new seekBarChangeListener());
 
 
 		//如果打开本地蓝牙设备不成功，提示信息，结束程序
@@ -172,25 +179,25 @@ public class BTClient extends Activity {
 //    	}
     }
 //发送Up指令
-	public void onSendUpClicked(View v){
-		try {
-			OutputStream osUp = _socket.getOutputStream();
-			osUp.write(0xAA);
-			osUp.write(0x55);
-			osUp.write(0x05);
-			osUp.write(0xA0);
-			osUp.write(0x80);
-			osUp.write(0x00);
-			osUp.write(0x01);
-			osUp.write(0x01);
-			osUp.write(0x0E);
-			osUp.write(0x00);
-			osUp.write(0x64);
-			osUp.write(0x02);
-			osUp.write(0x10);
-		}catch(IOException e){
-		}
-	}
+//	public void onSendUpClicked(View v){
+//		try {
+//			OutputStream osUp = _socket.getOutputStream();
+//			osUp.write(0xAA);
+//			osUp.write(0x55);
+//			osUp.write(0x05);
+//			osUp.write(0xA0);
+//			osUp.write(0x80);
+//			osUp.write(0x00);
+//			osUp.write(0x01);
+//			osUp.write(0x01);
+//			osUp.write(0x0E);
+//			osUp.write(0x00);
+//			osUp.write(0x64);
+//			osUp.write(0x02);
+//			osUp.write(0x10);
+//		}catch(IOException e){
+//		}
+//	}
 	//发送Down指令
 	/*public void onSendDownClicked(View v){
 		try {
@@ -916,4 +923,156 @@ public class BTClient extends Activity {
 			return true;
 		}
 	}
+
+	private static final String TAG = "SeekBar";
+final class seekBarChangeListener implements OnSeekBarChangeListener{
+	@Override
+	// 只要进度条的滑块发生变化，无论滑块是怎样变化的，都会调用此方法
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+		Log.i(TAG, "on  Progress   Changed方法,当前位置: "
+				+ seekBar.getProgress());
+						}
+		@Override
+//	 当用户停止滑动滑块的时候，调用此方法
+	public void onStopTrackingTouch(SeekBar seekBar) {
+			Log.i(TAG, "on  Stop  Tracking  Touch方法,当前位置: "
+					+ seekBar.getProgress());
+			int i = seekBar.getProgress();
+			switch (i) {
+				case 0:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 1:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 2:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 3:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 4:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 5:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 6:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 7:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 8:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				case 9:
+					try {
+						OutputStream seekBarLocation = _socket.getOutputStream();
+						seekBarLocation.write(0xAA);
+						seekBarLocation.write(0x55);
+						seekBarLocation.write(0x04);
+						seekBarLocation.write(0xA0);
+
+					}catch(IOException e){
+					}
+					break;
+				default:			//发送停止指令
+					try {
+					OutputStream seekBarLocation = _socket.getOutputStream();
+					seekBarLocation.write(0xAA);
+					seekBarLocation.write(0x55);
+					seekBarLocation.write(0x04);
+					seekBarLocation.write(0xA0);
+
+				}catch(IOException e){
+				}
+					break;
+
+
+
+
+			}
+			}
+
+		@Override
+		// 当用户开始滑动滑块的时候，调用此方法
+	public void onStartTrackingTouch(SeekBar seekBar) {
+			Log.i(TAG, "on    Start   Tracking   Touch方法,当前位置: "
+					+ seekBar.getProgress());
+						}
+
+			}
 }

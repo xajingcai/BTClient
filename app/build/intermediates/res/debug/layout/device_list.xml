@@ -50,4 +50,4 @@
         android:text="取消"
         android:onClick="OnCancel"
     />
-</LinearLayout><!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient4new/app/src/main/res/layout/device_list.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient/app/src/main/res/layout/device_list.xml -->

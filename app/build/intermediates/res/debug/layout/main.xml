@@ -109,23 +109,23 @@
 			android:text="LT"
 			android:id="@+id/left"
 			android:layout_centerVertical="true"
-			android:layout_alignParentLeft="true" />
+			android:layout_toLeftOf="@+id/down" />
 
 		<Button
 			android:layout_width="60dip"
 			android:layout_height="60dip"
 			android:text="Down"
 			android:id="@+id/down"
-			android:layout_below="@+id/left"
-			android:layout_toRightOf="@+id/left" />
+			android:layout_below="@+id/right"
+			android:layout_toLeftOf="@+id/right" />
 
 		<Button
 			android:layout_width="60dip"
 			android:layout_height="60dip"
 			android:text="Right"
 			android:id="@+id/right"
-			android:layout_below="@+id/up"
-			android:layout_toRightOf="@+id/up" />
+			android:layout_alignTop="@+id/left"
+			android:layout_alignRight="@+id/button2" />
 
 		<Button
 			android:layout_width="wrap_content"
@@ -141,14 +141,14 @@
 			android:text="TurnRight"
 			android:id="@+id/button2"
 			android:layout_below="@+id/down"
-			android:layout_alignRight="@+id/button3" />
+			android:layout_centerHorizontal="true" />
 
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="CBtn"
 			android:id="@+id/button3"
-			android:layout_alignTop="@+id/button6"
+			android:layout_below="@+id/right"
 			android:layout_alignParentRight="true" />
 
 		<Button
@@ -156,15 +156,16 @@
 			android:layout_height="wrap_content"
 			android:text="DBtn"
 			android:id="@+id/button4"
-			android:layout_below="@+id/right"
-			android:layout_toRightOf="@+id/button6" />
+			android:layout_below="@+id/down"
+			android:layout_alignParentRight="true"
+			android:layout_alignLeft="@+id/button3" />
 
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="ABtn"
 			android:id="@+id/button5"
-			android:layout_alignTop="@+id/up"
+			android:layout_alignTop="@+id/right"
 			android:layout_toLeftOf="@+id/button3" />
 
 		<Button
@@ -172,20 +173,11 @@
 			android:layout_height="wrap_content"
 			android:text="BBtn"
 			android:id="@+id/button6"
-			android:layout_alignTop="@+id/right"
-			android:layout_toLeftOf="@+id/button5" />
-
-		<SeekBar
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:id="@+id/seekBar"
-			android:indeterminate="false"
-			android:layout_alignParentTop="true"
-			android:layout_alignParentLeft="true"
-			android:layout_alignParentRight="true" />
+			android:layout_alignTop="@+id/button3"
+			android:layout_alignRight="@+id/button5" />
 
 
 	</RelativeLayout>
 
 
-</LinearLayout><!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient/app/src/main/res/layout/main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Li/Desktop/BTClient4new/BTClient4new/app/src/main/res/layout/main.xml -->
